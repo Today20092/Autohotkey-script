@@ -7,14 +7,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
       
     - name: Install AutoHotkey
-      run: sudo apt-get install autohotkey
+      run: choco install autohotkey.portable
       
     - name: Compile script
-      run: autohotkey /compile /in "*.ahk" /out "*.exe"
+      run: autohotkey.exe /compile /in "*.ahk" /out "*.exe"
