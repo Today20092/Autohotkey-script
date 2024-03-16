@@ -7,18 +7,18 @@ A_IconTip := "Right click me to set the hotkey`nfor searching quizlet"
 
 
 ; sets the tray icon
-onlinequizleticon := "https://raw.githubusercontent.com/Today20092/Autohotkey-script/main/Quizlet.ico"
+onlinequizleticon := "https://img.icons8.com/color/1000/quizlet.png"
 
 if !FileExist("Quizlet.ico"){
     try{
-        Download(onlinequizleticon, "Quizlet.ico")
+        Download(onlinequizleticon, "Quizlet.png")
     }
     catch{
     }
 }
 
-if FileExist("Quizlet.ico") {
-    TraySetIcon("Quizlet.ico",,)
+if FileExist("Quizlet.png") {
+    TraySetIcon("Quizlet.png",,)
 }
 
 
