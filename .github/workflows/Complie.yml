@@ -1,0 +1,20 @@
+name: Compile AutoHotkey Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Install AutoHotkey
+      run: sudo apt-get install autohotkey
+      
+    - name: Compile script
+      run: autohotkey /compile /in "*.ahk" /out "*.exe"
